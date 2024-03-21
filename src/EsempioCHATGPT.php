@@ -11,8 +11,8 @@
 <?php
 // Connessione al database
 $servername = "localhost";
-$username = "UseresempioPHP";
-$password = "Lucausai1978";
+$username = "username";
+$password = "password";
 $dbname = "esercizio_iform";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
