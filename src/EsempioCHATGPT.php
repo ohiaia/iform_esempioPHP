@@ -11,8 +11,8 @@
 <?php
 // Connessione al database
 $servername = "localhost";
-$username = "username";
-$password = "password";
+$username = "UseresempioPHP";
+$password = "Lucausai1978";
 $dbname = "esercizio_iform";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -28,7 +28,7 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // Stampa della tabella degli utenti
-    ?>
+        ?>
     <table>
         <tr>
             <th> Id Utente </th>
@@ -38,22 +38,22 @@ if ($result->num_rows > 0) {
             <th> IsAdmin </th>
             <th> Citta </th>
         </tr>
-    <?
+    <?php
     while($row = $result->fetch_assoc()) {
-        ?>
+                ?>
         <tr>
-            <td><? $row["id_utente"] ?></td>
-            <td><? $row["username"] ?></td>
-            <td><? $row["email"] ?></td>
-            <td><? $row["active_"] ?></td>
-            <td><? $row["is_admin"] ?></td>
-            <td><? $row["id_citta"] ?></td>
+            <td><?php echo $row["id_utente"] ?></td>
+            <td><?php echo  $row["username"] ?></td>
+            <td><?php echo  $row["email"] ?></td>
+            <td><?php echo  $row["active_"] ?></td>
+            <td><?php echo  $row["is_admin"] ?></td>
+            <td><?php echo  $row["id_citta"] ?></td>
         </tr>
-        <?
+        <?php
     }
     ?>
     </table>
-    <?
+    <?php
 } else {
     echo "Nessun risultato trovato";
 }
