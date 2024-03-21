@@ -42,7 +42,7 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
                 ?>
         <tr>
-            <td><?php echo $row["id_utente"] ?></td>
+            <td><?php echo  $row["id_utente"] ?></td>
             <td><?php echo  $row["username"] ?></td>
             <td><?php echo  $row["email"] ?></td>
             <td><?php echo  $row["active_"] ?></td>
