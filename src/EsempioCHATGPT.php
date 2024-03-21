@@ -58,6 +58,21 @@ if ($result->num_rows > 0) {
     echo "Nessun risultato trovato";
 }
 
+if ($result->num_rows > 0) {
+?>
+    <ul>
+    <?php
+    while($row = $result->fetch_assoc()) {
+        ?>
+        <li><?php echo $row["id_utente"] . " <b>" . $row["username"] . "</b> <i>" . $row["email"] . "</i> - [" . $row["active_"] . "] - (" . $row["is_admin"]. ") - " . $row["id_citta"] ?></li>
+    <?php
+    }
+    ?>
+    </ul>
+    <?php
+} else {
+    echo "0 results";
+}
 $conn->close();
 ?>
 </body>
